@@ -68,7 +68,7 @@ def fit_regression_model(X, y):
     loss (torch.Tensor): The final loss value after training.
     """
     loss = train_iteration(X, y, model, loss_fn, optimizer)
-    if epoch % 100 == 0:
+    if epoch % 1000 == 0:
         print(f'Epoch {epoch}, Loss: {loss.item()}')
 
     # Stop training if the loss improvement is less than the tolerance
